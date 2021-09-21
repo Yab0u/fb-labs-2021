@@ -1,8 +1,7 @@
 import sys  # arguments
-import math # logarithm
 
 ANCHORLEN = 3
-keyLen = 30
+keyLen = 15
 
 def flipSortDict(rawDict):
     sortedDict = {}
@@ -32,6 +31,7 @@ crackableWithFreqAnal = ""
 
 f.seek(0)
 key = ''
+print('Possible key: ', end= '')
 for pos in range(0, keyLen):
     freq = {}
     crackableWithFreqAnal = ""
