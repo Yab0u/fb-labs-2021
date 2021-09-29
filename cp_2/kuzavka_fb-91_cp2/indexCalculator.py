@@ -24,5 +24,5 @@ for string in f:
         else:
             freq[symbol] = 1
 
-print("Index = ", index(cipherTextLen, freq))
+print("Index =", index(cipherTextLen, freq))
 f.close()
