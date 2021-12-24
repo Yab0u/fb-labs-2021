@@ -91,6 +91,12 @@ def Verify(sign, signature, key):
 def Sign(signature, key):
     return Encrypt(signature, key) # sign
 
+def SendKey(k, e, m, d, N):
+    return [pow(k, e, m), pow(pow(k, d, N), e, m)]
+
+def ReceiveKey(k, s, d, N):
+    return [pow(k, d, N), pow(s, d, N)]
+
 for chell in ['A','B']: # Write the generated keys into files.
     keys = GenerateKeyPair(256)
     
